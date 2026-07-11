@@ -3,23 +3,27 @@
 <h1>Book Your Photography Session</h1>
 
 <form action="/photography" method="POST">
-Name 
+<label>Name:</label> 
 <input type="text" name="name"/>
 <br/>
-Email:
+<label>Email:</label>
 <input type="email" name="email"/>
 <br/>
-Phone:
+<label>Phone</label>
 <input type="number" name="phone"/>
 <br/>
-Reservation Date
+<label>Date</label> 
 <input type="date" name="reservationDate"/>
 <br/>
-Package
-<input type="radio" name="reservationPackage"/>
+<label>Package: </label>
+<select name="reservationPackage">
+    <option value="Weeding-photography">Wedding Photography Only </option>
+    <option value="Weeding-photography-videography">Wedding Photography & Videography </option>
+
+</select>
 <br/>
 
-<button type="submit">Book</button>
+<button class="submit" type="submit">Book</button>
 </form>
 </body>
 </html>

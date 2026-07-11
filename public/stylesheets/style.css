@@ -1,8 +1,148 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 40px 20px;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+  url('/images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 40px;
+  
+}
+
+form {
+  width: 100%;
+  max-width: 390px; 
+  margin: 0 auto;
+  
+  display: flex;
+  flex-direction: column; 
+  align-items: stretch;
+}
+
+form label {
+  color: #dfba73;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px; 
+  
+  margin-top: 10px; 
+  margin-bottom: 4px;
+  text-align: left;
+
+}
+
+form input, 
+form select {
+  width: 100%;
+  padding: 10px 12px; 
+  
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  color: #ffffff; 
+  
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+
+  background-color: rgba(255, 255, 255, 0.2); 
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 4px; 
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+form input:focus,
+form select:focus {
+  background-color: rgba(0, 0, 0, 0.61);
+  border-color: #dfba73; 
+  box-shadow: 0 0 8px rgba(223, 186, 115, 0.3);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
 
 
+.submit {
+  width: 100%;
+  background-color: #dfba73; 
+  color: #111111; 
+  padding: 14px;
+  
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  margin-top: 20px; 
+  transition: all 0.3s ease;
+}
+
+.submit:hover {
+  background-color: #e8cc94;
+}
+
+.home-book-btn {
+  display: inline-flex;      
+  justify-content: center;    
+  align-items: center;        
+  text-decoration: none;
+  
+
+  margin: 20px auto 0 auto;   
+  width: max-content;        
+  min-width: 160px;         
+  padding: 14px 40px;       
+  
+  /* YOUR VISUAL STYLES */
+  background-color: #dfba73; 
+  color: #111111; 
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
 
+.home-book-btn:hover {
+  background-color: #e8cc94;
+}
 
-input {
-    margin: 3px;
+footer {
+  font-size: 0.7em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.6);
 }
