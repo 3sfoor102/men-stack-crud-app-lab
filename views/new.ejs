@@ -1,0 +1,25 @@
+<%- include('./partials/nav') %>
+
+<h1>Book Your Photography Session</h1>
+
+<form action="/photography" method="POST">
+Name 
+<input type="text" name="name"/>
+<br/>
+Email:
+<input type="email" name="email"/>
+<br/>
+Phone:
+<input type="number" name="phone"/>
+<br/>
+Reservation Date
+<input type="date" name="reservationDate"/>
+<br/>
+Package
+<input type="radio" name="reservationPackage"/>
+<br/>
+
+<button type="submit">Book</button>
+</form>
+</body>
+</html>
