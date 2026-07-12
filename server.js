@@ -26,10 +26,22 @@ app.use(express.urlencoded({ extended: false }));
   
 app.get('/', async(req,res) =>{
   res.render('home.ejs')
+
 })
   
 app.get('/photography/new', async (req,res) => {
     res.render('new.ejs')
+})
+
+app.get('/bookings', async(req,res) =>{
+  let findReservation = await Photography.find({})
+  console.log('All Reservations:', findReservation)
+
+  res.render('lastbooking.ejs', {
+    reservations: findReservation
+    
+  })
+
 })
 
 // POST --> Create a new photography booking in the DB
@@ -40,14 +52,10 @@ app.post('/photography', async (req, res)=>{
     photographyData.phone = req.body.phone
     photographyData.reservationDate = req.body.reservationDate
     photographyData.reservationPackage = req.body.reservationPackage
-    
-    
-
+   
     let bookedSession = await Photography.create(photographyData)
     res.redirect('/')
 })
-
-
 
   
 //listing to port 3000 ⬇️⬇️⬇️⬇️⬇️

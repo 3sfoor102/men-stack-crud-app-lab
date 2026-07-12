@@ -1,5 +1,6 @@
 body {
   min-height: 100vh;
+  width: 100%;
   margin: 0;
   font-family: "DM Sans", sans-serif;
   display: flex;
@@ -10,7 +11,7 @@ body {
   padding: 40px 20px;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
-  url('/images/background.jpg');
+url('../images/background.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -23,6 +24,33 @@ h1 {
   max-width: 600px;
   margin-bottom: 40px;
   
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+.nav-links {
+    display: flex;
+    align-items: space-between;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar a:hover{
+color: red;
+
 }
 
 form {
@@ -116,7 +144,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   min-width: 160px;         
   padding: 14px 40px;       
   
-  /* YOUR VISUAL STYLES */
   background-color: #dfba73; 
   color: #111111; 
   text-align: center;
@@ -145,4 +172,20 @@ footer {
   text-align: center;
   padding: 10px;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.bookings {
+
+    color: white;
+    background-color: rgb(154, 162, 162);
+    padding: 50px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bookings h1 {
+ color: white;
+
 }
