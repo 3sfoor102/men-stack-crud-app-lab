@@ -1,0 +1,26 @@
+
+<%- include('./partials/nav') %>
+
+<h1>Edit <%=foundBooking.name%></h1>
+<form action="/bookings/<%=foundBooking._id%>?_method=PUT" method="POST">
+<label>Name:</label> 
+<input type="text" name="name" required value="<%=foundBooking.name %>"/>
+<br/>
+<label>Email:</label>
+<input type="email" name="email" required value="<%=foundBooking.email%>"/>
+<br/>
+<label>Phone</label>
+<input type="number" name="phone" required value ="<%=foundBooking.phone %>"/>
+<br/>
+<label>Date</label> 
+<input type="date" name="reservationDate" required value="<%=foundBooking.reservationDate %>" />
+<br/>
+<label>Package: </label>
+<select name="reservationPackage">
+        <option value="Weeding-photography">Wedding Photography Only </option>
+        <option value="Weeding-photography-videography">Wedding Photography & Videography </option>
+</select>
+<br/>
+
+<button type="submit">Edit Fruit</button>
+</form>

@@ -1,0 +1,34 @@
+ <%- include('./partials/nav') %>
+<body class="index-page">
+  <h1> All Bookings</h1>
+<ul>
+    <% allReservations.forEach(function(item){%>
+
+<div class="bookings">
+    <h1>HI, <%=item.name.toUpperCase()%>!</h1>
+    <h2>Congratulations!</h2>
+    <p>Your booking is confirmed to take place at: </p>
+    <strong><%=item.reservationDate%></strong>
+        <p><%=item._id %></p>
+    <a class="submit" id="show-booking-btn" href="/bookings/<%=item._id%>">Show Booking</a>
+
+</div>
+    <%}) %>
+</ul>
+</body>
+</html>
+
+ <ul>
+ <%allReservations.forEach((item)=>{%>
+
+    <li><%=item.name %></li>
+    <li><%=item._id %></li>
+    </a>
+  <%})%>
+</ul>
+
+
+
+
+</body>
+</html>

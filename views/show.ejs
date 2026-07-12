@@ -1,0 +1,29 @@
+ <%- include('./partials/nav') %>
+
+ <h1>My Booking</h1>
+
+ <ul>
+<div class="bookings">
+    <h1>HI, <%=singleBooking.name.toUpperCase()%>!</h1>
+     <h2>Congratulations!</h2>
+    <p>Your booking is confirmed.</p>
+    <p>Please look at your email <%=singleBooking.email%></p>
+    <p>Phone: <%=singleBooking.phone%> </p>
+    <p>Package: <%=singleBooking.reservationPackage%></p>
+    <p>Your reservation date is: </p>
+    <strong><%=singleBooking.reservationDate%></strong>
+    <div class="delete-edit-btns">
+    <form action="/bookings/<%=singleBooking._id%>?_method=DELETE" method="POST">
+            <button class="submit" type="submit">DELETE</button>
+
+    </form>
+    <a class="submit" id="edit-btn" href="/bookings/<%=singleBooking._id%>/edit">Edit <%=singleBooking.name%>'s Booking</a>
+    </div>
+</div>
+</ul>
+
+
+
+
+</body>
+</html> 
